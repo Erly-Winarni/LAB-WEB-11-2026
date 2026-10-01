@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Wisata Pantai Losari</title>
+
+<style>
+  /* ELEMENT SELECTOR */
+  body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    background-color: #f2f6f8;
+  }
+
+  h2 {
+    color: #01579b;
+  }
+
+  img {
+    max-width: 100%;
+  }
+
+  /* ID SELECTOR */
+  #header {
+    background-color: #01579b;
+    color: white;
+    text-align: center;
+    padding: 30px;         /* box model: padding */
+  }
+
+  #footer {
+    background-color: #01579b;
+    color: white;
+    text-align: center;
+    padding: 15px;         /* box model: padding */
+  }
+
+  /* CLASS SELECTOR (NAVIGASI pakai FLEXBOX) */
+  .nav {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 15px;
+    background-color: #0288d1;
+    padding: 10px;
+  }
+
+  .nav a {
+    color: white;
+    text-decoration: none;
+  }
+
+  /* PSEUDO-CLASS */
+  .nav a:hover {
+    text-decoration: underline;
+  }
+
+  .section {
+    max-width: 800px;
+    margin: 30px auto;     /* box model: margin */
+    padding: 0 15px;
+  }
+
+  /* GALERI pakai GRID */
+  .galeri {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+  }
+
+  .galeri img {
+    width: 100%;
+    border: 2px solid #0288d1;   /* box model: border */
+  }
+
+  table {
+    width: 100%;
+    border-collapse: collapse;
+  }
+
+  th, td {
+    border: 1px solid #ccc;      /* box model: border */
+    padding: 8px;                /* box model: padding */
+    text-align: left;
+  }
+
+  form input {
+    display: block;
+    margin-bottom: 10px;         /* box model: margin */
+    padding: 6px;
+  }
+
+  /* RESPONSIVE DESIGN */
+  @media (max-width: 600px) {
+    .galeri {
+      grid-template-columns: repeat(2, 1fr);
+    }
+    .nav {
+      flex-direction: column;
+      align-items: center;
+    }
+  }
+</style>
+</head>
+<body>
+
+<!-- HEADER -->
+<header id="header">
+  <h1>Wisata Pantai Losari</h1>
+  <p>Ikon Kota Makassar, Sulawesi Selatan</p>
+</header>
+
+<!-- NAVIGASI -->
+<nav class="nav">
+  <a href="#informasi">Informasi</a>
+  <a href="#galeri">Galeri</a>
+  <a href="#aktivitas">Aktivitas</a>
+  <a href="#lokasi">Lokasi</a>
+  <a href="#tabel">Info</a>
+  <a href="#formulir">Reservasi</a>
+  <a href="#video">Video</a>
+</nav>
+
+<!-- INFORMASI UTAMA -->
+<section id="informasi" class="section">
+  <h2>Tentang Pantai Losari</h2>
+  <img src="gambar/pantai-losari-utama.jpeg" alt="Pantai Losari">
+  <p>Pantai Losari adalah destinasi wisata ikonik di Makassar, terkenal dengan
+     pemandangan matahari terbenam yang indah. Buka 24 jam dan gratis.</p>
+</section>
+
+<!-- GALERI -->
+<section id="galeri" class="section">
+  <h2>Galeri Foto</h2>
+  <div class="galeri">
+    <img src="gambar/sunset.jpeg" alt="Sunset">
+    <img src="gambar/anjungan.jpeg" alt="Anjungan">
+    <img src="gambar/kuliner.jpeg" alt="Kuliner">
+    <img src="gambar/malam.jpeg" alt="Malam">
+  </div>
+</section>
+
+<!-- AKTIVITAS -->
+<section id="aktivitas" class="section">
+  <h2>Aktivitas</h2>
+  <ul>
+    <li>Menikmati sunset</li>
+    <li>Wisata kuliner khas Makassar</li>
+    <li>Berfoto di tulisan Pantai Losari</li>
+    <li>Jalan-jalan sore di anjungan</li>
+  </ul>
+</section>
+
+<!-- LOKASI -->
+<section id="lokasi" class="section">
+  <h2>Lokasi</h2>
+  <p>Jalan Penghibur, Makassar, Sulawesi Selatan.</p>
+  <iframe src="https://www.google.com/maps?q=Pantai+Losari+Makassar&output=embed" width="100%" height="250"></iframe>
+</section>
+
+<!-- TABEL INFORMASI -->
+<section id="tabel" class="section">
+  <h2>Informasi Kunjungan</h2>
+  <table>
+    <tr><th>Keterangan</th><th>Detail</th></tr>
+    <tr><td>Jam Buka</td><td>24 jam</td></tr>
+    <tr><td>Tiket Masuk</td><td>Gratis</td></tr>
+    <tr><td>Waktu Terbaik</td><td>Sore hari</td></tr>
+  </table>
+</section>
+
+<!-- FORMULIR -->
+<section id="formulir" class="section">
+  <h2>Formulir Reservasi</h2>
+  <form>
+    <label>Nama:</label>
+    <input type="text" name="nama">
+
+    <label>Email:</label>
+    <input type="email" name="email">
+
+    <label>Tanggal Kunjungan:</label>
+    <input type="date" name="tanggal">
+
+    <button type="submit">Kirim</button>
+  </form>
+</section>
+
+<!-- MULTIMEDIA -->
+<section id="video" class="section">
+  <h2>Video</h2>
+  <iframe width="100%" height="220" src="https://www.youtube.com/embed/y44TqGKsWYg"></iframe>
+</section>
+
+<!-- FOOTER -->
+<footer id="footer">
+  <p>&copy; 2026 Wisata Pantai Losari</p>
+</footer>
+
+</body>
+</html>
