@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tujuh Kerajaan | Komunitas Penggemar Game of Thrones</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+</head>
+<body class="font-serif bg-stone-950 text-stone-200">
+
+    <!-- 1. NAVBAR -->
+    <nav class="bg-stone-900 border-b border-amber-600 p-4 flex justify-between items-center">
+        <a href="#beranda" class="text-xl font-bold text-amber-500">Tujuh Kerajaan</a>
+        <div class="flex gap-4 text-sm">
+            <a href="#beranda" class="hover:text-amber-400">Beranda</a>
+            <a href="#tentang" class="hover:text-amber-400">Tentang</a>
+            <a href="#layanan" class="hover:text-amber-400">Layanan</a>
+            <a href="#kontak" class="hover:text-amber-400">Kontak</a>
+        </div>
+    </nav>
+
+    <!-- 2. HEADER -->
+    <header class="bg-stone-900 text-center p-10">
+        <h1 class="text-3xl md:text-5xl font-bold text-amber-500">Tujuh Kerajaan</h1>
+        <p class="mt-2 text-lg text-stone-400">Tempat para penggemar Game of Thrones berkumpul.</p>
+    </header>
+
+    <main>
+        <!-- 3. HERO -->
+        <section id="beranda" class="bg-gradient-to-b from-red-950 to-stone-950 text-center px-6 py-24">
+            <h2 class="text-2xl md:text-4xl font-bold text-white">Pilih rumahmu, ikut perangnya, bahas ceritanya</h2>
+            <p class="mt-4 text-lg text-stone-300 max-w-2xl mx-auto">
+                Komunitas penggemar Game of Thrones di Indonesia. Diskusi teori, nonton bareng, dan adu pengetahuan tentang Westeros.
+            </p>
+            <div class="mt-8 flex flex-wrap justify-center gap-4">
+                <a href="#kontak" class="bg-amber-500 text-stone-950 font-bold px-6 py-3 rounded hover:bg-amber-400">Gabung Sekarang</a>
+                <a href="#tentang" class="border-2 border-amber-500 text-amber-500 font-semibold px-6 py-3 rounded hover:bg-amber-500 hover:text-stone-950">Pelajari Lebih Lanjut</a>
+            </div>
+        </section>
+
+        <!-- 4. TENTANG (grid) -->
+        <section id="tentang" class="max-w-5xl mx-auto px-6 py-16">
+            <h2 class="text-2xl md:text-3xl font-bold text-amber-500 text-center">Tentang Komunitas</h2>
+            <div class="mt-8 grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+                <p class="text-lg">
+                    Tujuh Kerajaan adalah komunitas penggemar serial Game of Thrones. Kami berkumpul untuk membahas alur cerita,
+                    karakter, dan teori, baik secara online maupun kopi darat. Semua penggemar boleh bergabung, dari yang baru
+                    menonton sampai yang sudah hafal silsilah keluarga.
+                </p>
+                <div class="grid grid-cols-3 gap-4 text-center">
+                    <div class="bg-stone-900 rounded p-4">
+                        <p class="text-3xl font-bold text-amber-500">500</p>
+                        <p class="text-sm text-stone-400">Anggota</p>
+                    </div>
+                    <div class="bg-stone-900 rounded p-4">
+                        <p class="text-3xl font-bold text-amber-500">24</p>
+                        <p class="text-sm text-stone-400">Nobar</p>
+                    </div>
+                    <div class="bg-stone-900 rounded p-4">
+                        <p class="text-3xl font-bold text-amber-500">8</p>
+                        <p class="text-sm text-stone-400">Musim</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 5. FITUR / LAYANAN (grid) -->
+        <section id="layanan" class="bg-stone-900 px-6 py-16">
+            <h2 class="text-2xl md:text-3xl font-bold text-amber-500 text-center">Kegiatan Kami</h2>
+            <div class="mt-8 max-w-5xl mx-auto grid grid-cols-1 md:grid-cols-4 gap-4">
+                <div class="bg-stone-950 rounded p-6 border-t-4 border-red-800">
+                    <p class="text-3xl">⚔️</p>
+                    <h3 class="mt-3 text-lg font-bold text-white">Diskusi Teori</h3>
+                    <p class="mt-1 text-sm text-stone-400">Bahas alur cerita dan teori penggemar setiap minggu.</p>
+                </div>
+                <div class="bg-stone-950 rounded p-6 border-t-4 border-red-800">
+                    <p class="text-3xl">📺</p>
+                    <h3 class="mt-3 text-lg font-bold text-white">Nonton Bareng</h3>
+                    <p class="mt-1 text-sm text-stone-400">Maraton episode favorit bersama sesama penggemar.</p>
+                </div>
+                <div class="bg-stone-950 rounded p-6 border-t-4 border-red-800">
+                    <p class="text-3xl">🛡️</p>
+                    <h3 class="mt-3 text-lg font-bold text-white">Kuis Trivia</h3>
+                    <p class="mt-1 text-sm text-stone-400">Adu pengetahuan antar rumah, ada peringkat tiap bulan.</p>
+                </div>
+                <div class="bg-stone-950 rounded p-6 border-t-4 border-red-800">
+                    <p class="text-3xl">🗺️</p>
+                    <h3 class="mt-3 text-lg font-bold text-white">Peta dan Sejarah</h3>
+                    <p class="mt-1 text-sm text-stone-400">Kenali wilayah dan sejarah Westeros lebih dalam.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- 6. TESTIMONI (grid) -->
+        <section class="max-w-5xl mx-auto px-6 py-16">
+            <h2 class="text-2xl md:text-3xl font-bold text-amber-500 text-center">Kata Para Anggota</h2>
+            <div class="mt-8 grid grid-cols-1 md:grid-cols-2 gap-6">
+                <div class="bg-stone-900 rounded p-6">
+                    <p>"Akhirnya ada tempat buat ngobrolin teori tanpa dianggap aneh."</p>
+                    <p class="mt-4 font-bold text-amber-500">Rina, Anggota sejak 2024</p>
+                </div>
+                <div class="bg-stone-900 rounded p-6">
+                    <p>"Nobar-nya seru banget, kuis triviaku juga makin jago."</p>
+                    <p class="mt-4 font-bold text-amber-500">Andi, Anggota sejak 2025</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- 7. FORM PENDAFTARAN -->
+        <section id="kontak" class="bg-gradient-to-b from-stone-950 to-red-950 px-6 py-16">
+            <div class="max-w-xl mx-auto bg-stone-900 border border-amber-600 rounded p-8">
+                <h2 class="text-2xl font-bold text-amber-500 text-center">Daftar Jadi Anggota</h2>
+                <p class="mt-1 text-center text-sm text-stone-400">Isi data di bawah, lalu pilih rumah kesetiaanmu.</p>
+                <form class="mt-6 flex flex-col gap-4">
+                    <input type="text" placeholder="Nama lengkap" class="bg-stone-800 border border-stone-600 rounded p-2">
+                    <input type="email" placeholder="Email" class="bg-stone-800 border border-stone-600 rounded p-2">
+                    <select class="bg-stone-800 border border-stone-600 rounded p-2">
+                        <option>House Stark</option>
+                        <option>House Lannister</option>
+                        <option>House Targaryen</option>
+                        <option>House Baratheon</option>
+                    </select>
+                    <textarea rows="3" placeholder="Karakter favoritmu? (opsional)" class="bg-stone-800 border border-stone-600 rounded p-2"></textarea>
+                    <button type="submit" class="bg-amber-500 text-stone-950 font-bold py-3 rounded hover:bg-amber-400">Kirim Pendaftaran</button>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <!-- 8. FOOTER -->
+    <footer class="bg-black text-stone-400 text-sm px-6 py-10">
+        <div class="max-w-5xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-6">
+            <div>
+                <h3 class="text-lg font-bold text-amber-500">Tujuh Kerajaan</h3>
+                <p class="mt-2">Komunitas penggemar Game of Thrones.</p>
+            </div>
+            <div>
+                <h3 class="font-bold text-white">Kontak</h3>
+                <p class="mt-2">halo@tujuhkerajaan.id</p>
+                <p>+62 812 3456 7890</p>
+            </div>
+            <div>
+                <h3 class="font-bold text-white">Media Sosial</h3>
+                <p class="mt-2">Instagram | Discord | YouTube</p>
+            </div>
+        </div>
+        <p class="mt-8 text-center text-xs">
+            &copy; 2026 Tujuh Kerajaan. Komunitas penggemar tidak resmi, tidak berafiliasi dengan HBO. Kebijakan Privasi
+        </p>
+    </footer>
+
+</body>
+</html>
