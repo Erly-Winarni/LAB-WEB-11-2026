@@ -4,7 +4,7 @@ import { useState } from "react";
 
 const daftarKategori = ["Teknologi", "Fiksi", "Pengembangan Diri"];
 const inputClass =
-  "w-full rounded-lg border border-stone-300 bg-white px-4 py-2 focus:border-orange-600 focus:outline-none";
+  "w-full rounded-lg border border-stone-300 bg-cream px-4 py-2 focus:border-forest focus:outline-none";
 
 export default function UsulanPage() {
   const [nama, setNama] = useState("");
@@ -39,9 +39,9 @@ export default function UsulanPage() {
   }
 
   return (
-    <section className="mx-auto max-w-lg">
-      <div className="rounded-2xl border border-stone-300 bg-white p-6 shadow-sm">
-        <h1 className="mb-2 text-2xl font-bold">Usulan Buku</h1>
+    <section className="mx-auto max-w-xl">
+      <div className="rounded-3xl bg-white p-8 shadow-sm">
+        <h1 className="mb-2 font-serif text-3xl font-semibold text-forest">Usulan Buku</h1>
         <p className="mb-6 text-sm text-stone-600">
           Usulkan judul buku yang ingin kamu baca di Pustaka Senja.
         </p>
@@ -66,7 +66,7 @@ export default function UsulanPage() {
             <label htmlFor="alasan" className="mb-1 block text-sm text-stone-700">Alasan Usulan</label>
             <textarea id="alasan" rows={4} value={alasan} onChange={(e) => setAlasan(e.target.value)} className={inputClass} />
           </div>
-          <button type="submit" className="w-full rounded-lg bg-orange-700 py-2.5 font-medium text-white transition hover:bg-orange-600">
+          <button type="submit" className="w-full rounded-full bg-forest py-3 font-medium text-cream transition hover:bg-forest-deep">
             Kirim Usulan
           </button>
         </form>
@@ -85,12 +85,12 @@ export default function UsulanPage() {
 
       {daftarUsulan.length > 0 && (
         <div className="mt-8">
-          <h2 className="mb-3 text-lg font-semibold">Usulan yang Baru Dikirim</h2>
+          <h2 className="mb-3 font-serif text-xl font-semibold text-forest">Usulan yang Baru Dikirim</h2>
           <ul className="space-y-3">
             {daftarUsulan.map((u) => (
-              <li key={u.id} className="rounded-xl border border-stone-300 bg-white p-4">
+              <li key={u.id} className="rounded-xl border border-sand bg-white p-4">
                 <p className="font-semibold">{u.judul}</p>
-                <p className="text-xs text-orange-800">{u.kategori} • diusulkan oleh {u.nama}</p>
+                <p className="text-xs text-gold">{u.kategori} • diusulkan oleh {u.nama}</p>
                 <p className="mt-1 text-sm text-stone-700">{u.alasan}</p>
               </li>
             ))}

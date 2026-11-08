@@ -13,12 +13,15 @@ function Navbar() {
   const pathname = usePathname();
 
   return (
-    <nav className="sticky top-0 z-10 border-b border-stone-300 bg-amber-50/95 backdrop-blur">
-      <div className="mx-auto flex max-w-5xl items-center justify-between px-6 py-4">
-        <Link href="/" className="text-xl font-bold text-orange-800">
-          Pustaka Senja
+    <nav className="sticky top-0 z-20 border-b border-sand bg-cream/95 backdrop-blur">
+      <div className="mx-auto flex max-w-6xl items-center justify-between px-6 py-4">
+        <Link href="/" className="leading-none">
+          <span className="block font-serif text-2xl font-semibold tracking-wide text-forest">
+            Pustaka Senja
+          </span>
+          <span className="text-[0.65rem] tracking-[0.3em] text-gold">RUANG BACA</span>
         </Link>
-        <ul className="flex items-center gap-6">
+        <ul className="flex items-center gap-7 text-sm">
           {daftarMenu.map((item) => {
             const isActive =
               item.path === "/" ? pathname === "/" : pathname.startsWith(item.path);
@@ -28,8 +31,8 @@ function Navbar() {
                   href={item.path}
                   className={
                     isActive
-                      ? "border-b-2 border-orange-700 pb-1 font-semibold text-stone-900"
-                      : "text-stone-500 transition hover:text-stone-900"
+                      ? "border-b-2 border-gold pb-1 font-semibold text-forest"
+                      : "pb-1 text-stone-500 transition hover:text-forest"
                   }
                 >
                   {item.nama}

@@ -16,11 +16,13 @@ export default function KatalogPage() {
 
   return (
     <section>
-      <div className="mb-6">
-        <h1 className="text-3xl font-bold">Katalog Buku</h1>
-        <p className="mt-1 text-stone-600">Jelajahi koleksi buku Pustaka Senja.</p>
+      <div className="mb-8">
+        <h1 className="font-serif text-4xl font-semibold text-forest">Katalog Buku</h1>
+        <p className="mt-2 text-stone-600">
+          {bukuTampil.length} buku menunggu untuk dibaca.
+        </p>
       </div>
-      <div className="mb-6 flex flex-wrap gap-2">
+      <div className="mb-8 flex flex-wrap gap-2">
         {daftarKategori.map((kat) => (
           <button
             key={kat}
@@ -28,15 +30,15 @@ export default function KatalogPage() {
             onClick={() => setKategoriAktif(kat)}
             className={
               kategoriAktif === kat
-                ? "rounded-full bg-orange-700 px-4 py-1.5 text-sm font-medium text-white"
-                : "rounded-full bg-stone-200 px-4 py-1.5 text-sm text-stone-700 transition hover:bg-stone-300"
+                ? "rounded-full bg-forest px-5 py-2 text-sm font-medium text-cream"
+                : "rounded-full border border-stone-300 px-5 py-2 text-sm text-stone-600 transition hover:border-forest hover:text-forest"
             }
           >
             {kat}
           </button>
         ))}
       </div>
-      <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 md:grid-cols-3">
+      <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
         {bukuTampil.map((buku) => (
           <BukuCard
             key={buku.id}
