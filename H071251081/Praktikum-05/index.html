@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sistem Manajemen Tugas Tim</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-100 text-gray-800 p-6 font-sans">
+    
+    <div class="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-6">
+        
+        <!-- Bagian Kiri: Daftar Anggota -->
+        <div class="md:col-span-1 bg-white p-5 rounded border border-gray-300 shadow-sm">
+            <h2 class="text-xl font-bold mb-4">Daftar Anggota</h2>
+            
+            <!-- Indikator Loading dan Error -->
+            <div id="users-loading" class="text-gray-500 mb-2">Memuat anggota...</div>
+            <div id="users-error" class="text-red-500 font-medium hidden mb-2"></div>
+            
+            <!-- Tempat daftar anggota ditampilkan -->
+            <div id="users-list" class="flex flex-col gap-2"></div>
+        </div>
+
+        <!-- Bagian Kanan -->
+        <div class="md:col-span-2 bg-white p-5 rounded border border-gray-300 shadow-sm flex flex-col gap-4">
+            <h2 id="todo-title" class="text-xl font-bold">Pilih anggota untuk melihat tugas</h2>
+
+            <!-- Kontainer Aksi (Pencarian & Form Tambah) - Disembunyikan sampai anggota dipilih -->
+            <div id="todo-actions" class="hidden flex-col gap-4">
+                
+                <!-- Pencarian Tugas (F3) -->
+                <div>
+                    <input type="text" id="search-input" placeholder="Cari tugas berdasarkan judul..." class="w-full border border-gray-400 p-2 rounded">
+                </div>
+
+                <!-- Form Tambah Tugas Baru (F4) -->
+                <form id="add-form" class="bg-gray-50 border border-gray-300 p-4 rounded flex flex-col gap-2">
+                    <h3 class="font-bold">Tambah Tugas Baru</h3>
+                    <div class="flex gap-2">
+                        <input type="text" id="add-input" placeholder="Masukkan judul tugas..." class="flex-1 border border-gray-400 p-2 rounded">
+                        <button type="submit" id="btn-submit" class="bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded transition-colors">Simpan</button>
+                    </div>
+                    <!-- Pesan Validasi/Error dan Sukses -->
+                    <div id="add-error" class="text-red-600 text-sm hidden"></div>
+                    <div id="add-success" class="text-green-600 text-sm font-semibold hidden">Tugas berhasil ditambahkan.</div>
+                </form>
+
+                <!-- Ringkasan Progres -->
+                <div id="todo-summary" class="font-bold text-gray-700 border-b border-gray-300 pb-2"></div>
+            </div>
+
+            <!-- Kontainer Daftar Tugas -->
+            <div id="todos-loading" class="text-gray-500 hidden">Memuat tugas...</div>
+            <div id="todos-error" class="text-red-500 font-medium hidden"></div>
+            <div id="todos-empty-search" class="text-gray-500 italic hidden">Tidak ada tugas yang cocok.</div>
+            
+            <div id="todos-list" class="flex flex-col gap-3"></div>
+        </div>
+        
+    </div>
+
+    <!-- Menghubungkan script JavaScript -->
+    <script src="script.js"></script>
+</body>
+</html>
