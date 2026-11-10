@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="id" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KarisNail's Studio - Custom Nail Art & Care</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-purple-50/30 text-gray-800 font-sans antialiased">
+
+    <!-- 1. Navbar -->
+    <nav class="fixed top-0 left-0 right-0 z-50 bg-white/90 backdrop-blur-md shadow-sm border-b border-purple-100">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16">
+                <div class="flex items-center gap-2">
+                    <span class="text-2xl font-extrabold bg-gradient-to-r from-purple-600 to-pink-500 bg-clip-text text-transparent">KarisNail's</span>
+                </div>
+                <div class="hidden md:flex space-x-8 text-sm font-medium text-gray-600">
+                    <a href="#beranda" class="hover:text-purple-600 transition">Beranda</a>
+                    <a href="#tentang" class="hover:text-purple-600 transition">Tentang</a>
+                    <a href="#layanan" class="hover:text-purple-600 transition">Layanan</a>
+                    <a href="#testimoni" class="hover:text-purple-600 transition">Testimoni</a>
+                    <a href="#kontak" class="hover:text-purple-600 transition">Booking</a>
+                </div>
+                <div>
+                    <a href="#kontak" class="bg-purple-600 hover:bg-purple-700 text-white text-sm font-semibold px-5 py-2.5 rounded-full shadow-md hover:shadow-lg transition duration-300">
+                    Booking Appointment
+                    </a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- 2 & 3. Header & Hero Section -->
+    <section id="beranda" class="pt-28 pb-16 md:pt-36 md:pb-24 px-4 max-w-7xl mx-auto">
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+            <div class="space-y-6 text-center md:text-left">
+                <span class="inline-block bg-purple-100 text-purple-700 text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wider">
+                    Premium Nail Art & Press-On Nails
+                </span>
+                <h1 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold text-gray-900 leading-tight">
+                    Ekspresikan Gayamu Lewat Sentuhan Kuku
+                </h1>
+                <p class="text-gray-600 text-base sm:text-lg max-w-lg mx-auto md:mx-0">
+                    Ubah kuku tampil makin cantik dengan desain (custom nail art) terkini, gel polish tahan lama, dan perawatan (manicure) higienis berkualitas premium.
+                </p>
+                <div class="flex flex-col sm:flex-row gap-4 justify-center md:justify-start pt-2">
+                    <a href="#kontak" class="bg-purple-600 hover:bg-purple-700 text-white font-semibold px-8 py-3.5 rounded-full shadow-lg hover:shadow-purple-300 text-center transition duration-300">
+                        Booking Sekarang
+                    </a>
+                    <a href="#tentang" class="border border-purple-300 text-purple-700 hover:bg-purple-50 font-semibold px-8 py-3.5 rounded-full text-center transition duration-300">
+                        Pelajari Lebih Lanjut
+                    </a>
+                </div>
+            </div>
+            <div class="relative flex justify-center">
+                <div class="absolute -top-4 -left-4 w-72 h-72 bg-purple-200 rounded-full mix-blend-multiply filter blur-xl opacity-70 animate-pulse"></div>
+                <div class="absolute -bottom-4 -right-4 w-72 h-72 bg-pink-200 rounded-full mix-blend-multiply filter blur-xl opacity-70 animate-pulse"></div>
+                <img src="528610075034773639.jpg" alt="Nail Art Showcase" class="relative rounded-3xl shadow-2xl w-full max-w-md object-cover">
+            </div>
+        </div>
+    </section>
+
+    <!-- 4. Tentang (About) -->
+    <section id="tentang" class="py-16 bg-white border-y border-purple-100">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+                <div class="order-2 md:order-1">
+                    <img src="Tangkapan Layar 2026-09-27 pukul 14.37.44.png" alt="Tentang NailVibe Studio" class="rounded-2xl shadow-lg w-full object-cover">
+                </div>
+                <div class="order-1 md:order-2 space-y-4">
+                    <h2 class="text-3xl font-bold text-gray-900">Tentang KarisNail's Studio</h2>
+                    <p class="text-gray-600 leading-relaxed">
+                        KarisNail's Studio adalah studio kecantikan kuku modern yang berfokus pada seni (nail art) kustom dan perawatan kesehatan kuku. Kami percaya bahwa setiap detail kuku dapat mencerminkan kepribadian dan kepercayaan diri Anda.
+                    </p>
+                    <p class="text-gray-600 leading-relaxed">
+                        Dengan nail artist profesional, peralatan tersterilisasi standar salon medis, serta bahan gel ramah lingkungan, kami memastikan kuku Anda tampil menawan tanpa merusak kesehatan kuku alami.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 5. Fitur / Layanan Utama - Menggunakan Grid System -->
+    <section id="layanan" class="py-16 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center max-w-2xl mx-auto mb-12">
+            <h2 class="text-3xl font-bold text-gray-900">Layanan & Keunggulan Kami</h2>
+            <p class="text-gray-600 mt-2">Pilihan perawatan kuku terbaik yang dirancang khusus untuk kenyamanan dan gaya Anda.</p>
+        </div>
+        
+        <!-- Grid System 4 Kolom -->
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+            <div class="bg-white p-6 rounded-2xl shadow-sm border border-purple-100 hover:shadow-md transition">
+                <div class="w-12 h-12 bg-purple-100 text-purple-600 rounded-xl flex items-center justify-center font-bold text-xl mb-4">💅</div>
+                <h3 class="text-xl font-semibold text-gray-900 mb-2">Custom 3D & 2D Art</h3>
+                <p class="text-gray-600 text-sm">Bebas request berbagai motif unik, aksesoris gem, hingga desain karakter kustom.</p>
+            </div>
+            <div class="bg-white p-6 rounded-2xl shadow-sm border border-purple-100 hover:shadow-md transition">
+                <div class="w-12 h-12 bg-purple-100 text-purple-600 rounded-xl flex items-center justify-center font-bold text-xl mb-4">💎</div>
+                <h3 class="text-xl font-semibold text-gray-900 mb-2">Gel Polish Tahan Lama</h3>
+                <p class="text-gray-600 text-sm">Menggunakan formula gel premium yang tidak mudah *chipping* hingga 4 minggu.</p>
+            </div>
+            <div class="bg-white p-6 rounded-2xl shadow-sm border border-purple-100 hover:shadow-md transition">
+                <div class="w-12 h-12 bg-purple-100 text-purple-600 rounded-xl flex items-center justify-center font-bold text-xl mb-4">🩺</div>
+                <h3 class="text-xl font-semibold text-gray-900 mb-2">Higienis & Steril</h3>
+                <p class="text-gray-600 text-sm">Semua peralatan medis disterilkan menggunakan *UV & Heat Sterilizer* sebelum digunakan.</p>
+            </div>
+            <div class="bg-white p-6 rounded-2xl shadow-sm border border-purple-100 hover:shadow-md transition">
+                <div class="w-12 h-12 bg-purple-100 text-purple-600 rounded-xl flex items-center justify-center font-bold text-xl mb-4">📦</div>
+                <h3 class="text-xl font-semibold text-gray-900 mb-2">Handmade Press-On Nails</h3>
+                <p class="text-gray-600 text-sm">Ingin kuku cantik dalam hitungan menit? Kami menyediakan *press-on nails* kustom siap pakai.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- 6. Testimoni -->
+    <section id="testimoni" class="py-16 bg-purple-100/40">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-2xl mx-auto mb-12">
+                <h2 class="text-3xl font-bold text-gray-900">Ulasan Pelanggan</h2>
+                <p class="text-gray-600 mt-2">Pengalaman mereka yang telah mempercayakan keindahan kukunya di KarisNail's</p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="bg-white p-6 rounded-2xl shadow-sm flex flex-col justify-between">
+                    <p class="text-gray-600 italic mb-4">"Hasil 3D nail art-nya rapi banget! Detailnya persis seperti referensi foto yang aku bawa. Pasti bakal balik lagi."</p>
+                    <div class="flex items-center gap-3">
+                        <div class="w-10 h-10 bg-purple-400 rounded-full flex items-center justify-center font-bold text-white">AV</div>
+                        <div>
+                            <h4 class="font-bold text-sm text-gray-900">Aisya AT</h4>
+                            <span class="text-xs text-purple-600">Pelanggan Setia</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="bg-white p-6 rounded-2xl shadow-sm flex flex-col justify-between">
+                    <p class="text-gray-600 italic mb-4">"Press-on nails-nya praktis banget buat acara kondangan mendadak. Pas di kuku dan kelihatan kayak habis manicure di salon."</p>
+                    <div class="flex items-center gap-3">
+                        <div class="w-10 h-10 bg-pink-400 rounded-full flex items-center justify-center font-bold text-white">CP</div>
+                        <div>
+                            <h4 class="font-bold text-sm text-gray-900">Puti Amelia</h4>
+                            <span class="text-xs text-purple-600">Fashion Blogger</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="bg-white p-6 rounded-2xl shadow-sm flex flex-col justify-between">
+                    <p class="text-gray-600 italic mb-4">"Tempatnya bersih, alat-alatnya di-steril depan kita. Nail artist-nya ramah dan telaten banget ngerjain kuku aku."</p>
+                    <div class="flex items-center gap-3">
+                        <div class="w-10 h-10 bg-purple-500 rounded-full flex items-center justify-center font-bold text-white">NS</div>
+                        <div>
+                            <h4 class="font-bold text-sm text-gray-900">Nadhifa Alisya</h4>
+                            <span class="text-xs text-purple-600">Pelanggan Studio</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 7. Form Pendaftaran / Booking -->
+    <section id="kontak" class="py-16 max-w-4xl mx-auto px-4">
+        <div class="bg-white p-8 md:p-12 rounded-3xl shadow-xl border border-purple-100">
+            <div class="text-center mb-8">
+                <h2 class="text-3xl font-bold text-gray-900">Reservasi Jadwal / Pesan Press-On</h2>
+                <p class="text-gray-600 mt-2">Isi formulir di bawah ini untuk mengamankan slot appointment atau memesan kuku kustom Anda.</p>
+            </div>
+            
+            <form action="#" method="POST" class="space-y-4">
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                    <div>
+                        <label class="block text-sm font-medium text-gray-700 mb-1">Nama Lengkap</label>
+                        <input type="text" placeholder="Masukkan nama Anda" class="w-full px-4 py-3 rounded-xl border border-gray-200 focus:outline-none focus:ring-2 focus:ring-purple-500/50 focus:border-purple-500 transition">
+                    </div>
+                    <div>
+                        <label class="block text-sm font-medium text-gray-700 mb-1">Nomor WhatsApp</label>
+                        <input type="tel" placeholder="0812xxxxxxx" class="w-full px-4 py-3 rounded-xl border border-gray-200 focus:outline-none focus:ring-2 focus:ring-purple-500/50 focus:border-purple-500 transition">
+                    </div>
+                </div>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                    <div>
+                        <label class="block text-sm font-medium text-gray-700 mb-1">Pilih Layanan</label>
+                        <select class="w-full px-4 py-3 rounded-xl border border-gray-200 focus:outline-none focus:ring-2 focus:ring-purple-500/50 focus:border-purple-500 transition text-gray-600">
+                            <option>Studio Appointment (Manicure & Nail Art)</option>
+                            <option>Custom Press-On Nails (Pengiriman)</option>
+                            <option>Nail Removal & Care</option>
+                        </select>
+                    </div>
+                    <div>
+                        <label class="block text-sm font-medium text-gray-700 mb-1">Rencana Tanggal Booking</label>
+                        <input type="date" class="w-full px-4 py-3 rounded-xl border border-gray-200 focus:outline-none focus:ring-2 focus:ring-purple-500/50 focus:border-purple-500 transition text-gray-600">
+                    </div>
+                </div>
+                <div>
+                    <label class="block text-sm font-medium text-gray-700 mb-1">Catatan Desain / Permintaan Khusus</label>
+                    <textarea rows="3" placeholder="Tuliskan ide desain kuku atau ukuran kuku Anda..." class="w-full px-4 py-3 rounded-xl border border-gray-200 focus:outline-none focus:ring-2 focus:ring-purple-500/50 focus:border-purple-500 transition"></textarea>
+                </div>
+                <button type="button" class="w-full bg-purple-600 hover:bg-purple-700 text-white font-bold py-3.5 rounded-xl shadow-lg transition duration-300">
+                    Kirim Reservasi
+                </button>
+            </form>
+        </div>
+    </section>
+
+    <!-- 8. Footer -->
+    <footer class="bg-gray-900 text-gray-400 py-12 border-t border-gray-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-8">
+                <div>
+                    <span class="text-2xl font-bold text-white">KarisNail's Studio</span>
+                    <p class="mt-2 text-sm text-gray-400">Pilihan tepat untuk perawatan kuku cantik, higienis, dan penuh gaya.</p>
+                </div>
+                <div>
+                    <h4 class="text-white font-semibold mb-3">Kontak & Lokasi</h4>
+                    <p class="text-sm">Email: karisnailstudio@gmail.com</p>
+                    <p class="text-sm">WhatsApp: +62 8953-6536-66567</p>
+                    <p class="text-sm">Jl. Perintis Kemerdekaan No. 10, Makassar</p>
+                </div>
+                <div>
+                    <h4 class="text-white font-semibold mb-3">Ikuti Kami</h4>
+                    <div class="flex space-x-4 text-sm">
+                        <a href="#" class="hover:text-purple-400 transition">Instagram</a>
+                        <a href="#" class="hover:text-purple-400 transition">TikTok</a>
+                        <a href="#" class="hover:text-purple-400 transition">Pinterest</a>
+                    </div>
+                </div>
+            </div>
+            <div class="border-t border-gray-800 pt-8 text-center text-xs text-gray-500">
+                <p>&copy; 2026 KarisNail's Studio. All rights reserved. | <a href="#" class="hover:underline">Kebijakan Privasi</a></p>  
+                <a href="#" class="hover:underline">KARIS KABANGA (H071251059)</a></p>
+            </div>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>
