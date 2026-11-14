@@ -1,0 +1,30 @@
+@import "tailwindcss";
+
+@theme {
+  --font-display: "Bricolage Grotesque", system-ui, sans-serif;
+  --font-body: "DM Sans", system-ui, sans-serif;
+  --color-pink: #ff3d81;
+  --color-orange: #ff8a00;
+  --color-sun: #ffd60a;
+  --color-mint: #20c997;
+  --color-sky: #2ec4f1;
+  --color-grape: #7c4dff;
+  --color-ink: #1d1536;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  font-family: var(--font-body);
+  color: var(--color-ink);
+  background: #fff;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+}
