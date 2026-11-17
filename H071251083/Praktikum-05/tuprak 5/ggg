@@ -1,0 +1,182 @@
+TP 5
+SET search_path TO classicmodels, public;
+-- 1
+SELECT
+    c.contactFirstName,
+    c.customerName,
+    o.city AS kota_kantor,
+    CONCAT(e.firstName, ' ', e.lastName) AS sales_rep_name
+FROM customers c
+JOIN employees e 
+ON c.salesRepEmployeeNumber = e.employeeNumber
+JOIN offices o   
+ON e.officeCode = o.officeCode
+WHERE c.contactFirstName ILIKE 'A%'
+  AND o.city != 'NYC'
+ORDER BY c.customerName ASC;
+
+
+--2
+SELECT
+    c.customerName,
+    SUM(p.amount) AS total_payment,
+    MAX(p.amount) AS max_single_payment
+FROM customers c
+JOIN payments p 
+ON c.customerNumber = p.customerNumber
+GROUP BY c.customerNumber, c.customerName
+HAVING SUM(p.amount) > 50000
+ORDER BY total_payment DESC;
+
+
+-- 3
+SELECT
+    c.customerName,
+    COUNT(DISTINCT o.orderNumber) AS total_order,
+    ROUND(AVG(od.quantityOrdered), 2) AS avg_quantity_per_order
+FROM customers c
+JOIN orders o         
+ON c.customerNumber = o.customerNumber
+JOIN orderdetails od 
+ON o.orderNumber = od.orderNumber
+GROUP BY c.customerNumber, c.customerName
+HAVING COUNT(DISTINCT o.orderNumber) > 3
+   AND AVG(od.quantityOrdered) > 35
+ORDER BY total_order DESC, avg_quantity_per_order DESC;
+
+
+-- 4
+SELECT
+    p.productLine,
+    SUM(od.quantityOrdered) AS total_terjual,
+    ROUND(AVG(od.priceEach), 2) AS rata_rata_harga,
+    ROUND(AVG((p.MSRP - od.priceEach) / p.MSRP * 100), 2) AS avg_discount_percentage
+FROM products p
+JOIN orderdetails od 
+ON p.productCode = od.productCode
+GROUP BY p.productLine
+HAVING SUM(od.quantityOrdered) > 3000
+   AND AVG(od.priceEach) > 80
+ORDER BY total_terjual DESC;
+
+
+-- 5
+SELECT
+    c.customerName,
+    SUM(od.quantityOrdered * od.priceEach) AS total_transaksi,
+    COUNT(DISTINCT o.orderNumber)AS total_shipped_orders,
+    ROUND(SUM(od.quantityOrdered * od.priceEach)/ COUNT(DISTINCT o.orderNumber), 2) AS avg_transaction_per_order
+FROM customers c
+JOIN orders o        
+ON c.customerNumber = o.customerNumber
+JOIN orderdetails od  
+ON o.orderNumber = od.orderNumber
+WHERE o.status LIKE '%Shipped%'
+GROUP BY c.customerNumber, c.customerName
+HAVING COUNT(DISTINCT EXTRACT(YEAR FROM o.orderDate)) > 1
+ORDER BY total_transaksi DESC
+LIMIT 5;
+
+
+-- 6
+SELECT
+    c.customerName,
+    c.city  AS customer_city,
+    ofc.city AS office_city,
+    SUM(od.quantityOrdered) AS total_unit_terjual,
+    ROUND(SUM(od.quantityOrdered * od.priceEach)/ COUNT(DISTINCT o.orderNumber), 2) AS avg_nilai_per_order
+FROM customers c
+JOIN employees e      
+ON c.salesRepEmployeeNumber = e.employeeNumber
+JOIN offices ofc     
+ON e.officeCode = ofc.officeCode
+JOIN orders o         
+ON c.customerNumber = o.customerNumber
+JOIN orderdetails od  
+ON o.orderNumber = od.orderNumber
+WHERE ofc.territory LIKE '%EMEA%'
+GROUP BY c.customerNumber, c.customerName, c.city, ofc.city
+HAVING COUNT(DISTINCT EXTRACT(YEAR FROM o.orderDate)) > 2
+   AND SUM(od.quantityOrdered) > 1000
+   AND SUM(od.quantityOrdered * od.priceEach) / COUNT(DISTINCT o.orderNumber) > 10000
+ORDER BY avg_nilai_per_order DESC;
+
+TP 6
+SET search_path TO classicmodels, public;
+-- 1
+SELECT
+    productCode,
+    productName,
+    MSRP,
+    quantityInStock,
+    CASE
+        WHEN MSRP < 50 AND quantityInStock > 500  THEN 'Ekonomis - Stok Tinggi'
+        WHEN MSRP < 50 AND quantityInStock <= 500 THEN 'Ekonomis - Stok Rendah'
+        WHEN MSRP BETWEEN 50 AND 100              THEN 'Harga Menengah'
+        WHEN MSRP > 100                           THEN 'Harga Premium'
+    END AS kategori
+FROM products
+ORDER BY MSRP DESC;
+
+
+-- 2
+SELECT
+    productCode,
+    SUM(quantityOrdered) AS total_unit_terjual,
+    COUNT(DISTINCT orderNumber) AS jumlah_pesanan
+FROM orderdetails
+GROUP BY productCode
+HAVING SUM(quantityOrdered) > (SELECT AVG(quantityOrdered) FROM orderdetails)
+   AND COUNT(DISTINCT orderNumber) > 10
+ORDER BY total_unit_terjual DESC;
+
+
+-- 3
+SELECT
+    productCode,
+    productName,
+    quantityInStock,
+    MSRP
+FROM products
+WHERE quantityInStock > (SELECT AVG(quantityInStock) FROM products)
+  AND MSRP > (SELECT AVG(MSRP) FROM products)
+ORDER BY quantityInStock DESC;
+
+
+-- 4
+BEGIN;
+UPDATE orders
+SET status = 'Pengiriman'
+WHERE orderNumber = 10100;
+SAVEPOINT status_pengiriman;
+UPDATE orders
+SET status = 'Batal'
+WHERE orderNumber = 10100;
+ROLLBACK TO SAVEPOINT status_pengiriman;
+COMMIT;
+
+
+-- 5
+CREATE TABLE anggota (
+    id             INTEGER GENERATED ALWAYS AS IDENTITY PRIMARY KEY,
+    nama_anggota   VARCHAR(50) NOT NULL,
+    kota_domisili  VARCHAR(20) NOT NULL
+);
+
+CREATE TABLE buku (
+    id          INTEGER GENERATED ALWAYS AS IDENTITY PRIMARY KEY,
+    judul_buku  VARCHAR(100) NOT NULL,
+    genre       VARCHAR(20)  NOT NULL,
+    stok        INTEGER DEFAULT 1
+);
+
+CREATE TABLE peminjaman (
+    id               INTEGER GENERATED ALWAYS AS IDENTITY PRIMARY KEY,
+    id_anggota       INTEGER REFERENCES anggota(id),
+    id_buku          INTEGER REFERENCES buku(id),
+    tanggal_pinjam   DATE NOT NULL,
+    tanggal_kembali  DATE,              
+    denda            INTEGER DEFAULT 0
+);
+CREATE INDEX index_buku_genre ON buku(genre);
+CREATE INDEX index_anggota_kota_domisili ON anggota(kota_domisili);
