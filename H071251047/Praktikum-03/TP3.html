@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RasaNusantara - UMKM Kuliner</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+</head>
+<body class="font-sans text-gray-700 bg-gray-50/30">
+    <!-- Header: Berisi nama utama website atau topik dan tagline singkat.
+-->
+    <header class="bg-orange-600 text-white py-4 px-8 text-center">
+        <h1 class="text-3xl font-bold">RasaNusantara</h1>
+        <p class="mt-2 text-sm">Nikmati cita rasa autentik dari seluruh nusantara</p>
+    </header>
+    <!-- 2. Navbar: Bagian navigasi utama yang berisi tautan/menu ke halaman atau bagian
+    penting, seperti Beranda, Tentang, Layanan, Kontak-->
+    <nav class="flex items-center justify-between px-8 py-4 bg-white shadow-sm sticky top-0 z-50">
+        <!-- Logo -->
+        <div class="flex items-center gap-2 font-bold text-xl text-orange-600">
+            <span>🍲</span>
+            <span class="text-gray-800">Rasa<span class="text-orange-600">Nusantara</span></span>
+        </div>
+        
+        <div class="flex items-center gap-8 text-sm font-medium">
+            <a href="#beranda" class="inline-block transition-transform duration-200 hover:scale-110 hover:text-orange-500">Beranda</a>
+            <a href="#tentang" class="inline-block transition-transform duration-200 hover:scale-110 hover:text-orange-500">Tentang</a>
+            <a href="#keunggulan" class="inline-block transition-transform duration-200 hover:scale-110 hover:text-orange-500">Keunggulan</a>
+            <a href="#kontak" class="inline-block transition-transform duration-200 hover:scale-110 hover:text-orange-500">Kontak</a>
+        </div>
+    </nav>
+
+    <!-- 3. superhero -->
+    <section id="beranda" class="max-w-6xl mx-auto px-6 py-16 grid grid-cols-1 md:grid-cols-2 items-center gap-12">
+        <div>
+            <span class="bg-orange-100 text-orange-700 text-xs font-semibold px-3 py-1 rounded-full uppercase tracking-wider">
+                UMKM Kuliner
+            </span>
+            <h1 class="text-4xl md:text-5xl font-extrabold text-gray-900 mt-4 leading-tight">
+                Nikmati Rasa <br><span class="text-orange-600">Nusantara</span>
+            </h1>
+            <p class="text-gray-600 mt-4 leading-relaxed">
+                Hidangan lezat khas Indonesia dengan bahan pilihan dan cita rasa autentik, langsung dari dapur kami untuk Anda.
+            </p>
+            <div class="flex items-center gap-4 mt-6">
+                
+                <a href="#kontak" class="border border-orange-600 text-orange-600 hover:bg-orange-50 font-medium px-6 py-2.5 rounded-lg transition">
+                    Pesan Sekarang
+                </a>
+            </div>
+        </div>
+        <div class="flex justify-center">
+            <img src="assets/gambar1.png" 
+                 alt="Rasa Nusantara" 
+                 class="w-full max-w-md rounded-full shadow-2xl object-cover aspect-square border-8 border-white">
+        </div>
+    </section>
+
+    <!-- 4. tentang (About): Bagian yang menjelaskan tujuan utama website, entah itu
+menjelaskan tentang event, layanan, atau komunitas.
+ -->
+    <section id="tentang" class="max-w-6xl mx-auto px-6 py-16">
+        <div class="text-center mb-10">
+            <h2 class="text-2xl font-bold text-gray-900">Tentang Kami</h2>
+            <div class="w-12 h-1 bg-orange-500 mx-auto mt-2 rounded"></div>
+        </div>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-center bg-white p-6 rounded-2xl shadow-sm border border-gray-100">
+            <img src="assets/gambar2.png" 
+                 alt="Bahan Segar" 
+                 class="rounded-xl w-full h-64 object-cover">
+            <div>
+                <p class="text-gray-600 leading-relaxed">
+                    <strong class="text-gray-800">RasaNusantara</strong> adalah UMKM kuliner yang menghadirkan berbagai hidangan khas Indonesia dengan cita rasa autentik. Kami percaya bahwa makanan bukan hanya soal rasa, tetapi juga tentang cerita, budaya, dan kebersamaan.
+                </p>
+                <p class="text-gray-600 leading-relaxed mt-4">
+                    Dari dapur kami, untuk rasa yang selalu dirindukan.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- 5. Fitur atau Manfaat (Features/Benefits) (opsional): Bagian yang menampilkan 3-4
+poin penting atau fitur yang ditawarkan oleh website/layanan/event. -->
+    <section id="keunggulan" class="max-w-6xl mx-auto px-6 py-16">
+        <div class="text-center mb-12">
+            <h2 class="text-2xl font-bold text-gray-900">Keunggulan Kami</h2>
+            <div class="w-12 h-1 bg-orange-500 mx-auto mt-2 rounded"></div>
+        </div>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+            <!-- Card 1 -->
+            <div class="bg-orange-50/50 border border-orange-100 p-8 rounded-2xl text-center hover:shadow-md transition">
+                <div class="w-12 h-12 bg-orange-100 text-orange-600 rounded-full flex items-center justify-center mx-auto mb-4 text-xl">
+                    🌱
+                </div>
+                <h3 class="font-bold text-gray-800 mb-2">Bahan Segar</h3>
+                <p class="text-sm text-gray-600">Kami menggunakan bahan-bahan pilihan yang selalu segar dan berkualitas.</p>
+            </div>
+            <!-- Card 2 -->
+            <div class="bg-orange-50/50 border border-orange-100 p-8 rounded-2xl text-center hover:shadow-md transition">
+                <div class="w-12 h-12 bg-orange-100 text-orange-600 rounded-full flex items-center justify-center mx-auto mb-4 text-xl">
+                    👨‍🍳
+                </div>
+                <h3 class="font-bold text-gray-800 mb-2">Rasa Autentik</h3>
+                <p class="text-sm text-gray-600">Resep tradisional dengan cita rasa khas Nusantara yang tetap terjaga.</p>
+            </div>
+            <!-- Card 3 -->
+            <div class="bg-orange-50/50 border border-orange-100 p-8 rounded-2xl text-center hover:shadow-md transition">
+                <div class="w-12 h-12 bg-orange-100 text-orange-600 rounded-full flex items-center justify-center mx-auto mb-4 text-xl">
+                    🏷️
+                </div>
+                <h3 class="font-bold text-gray-800 mb-2">Harga Bersahabat</h3>
+                <p class="text-sm text-gray-600">Nikmatnya rasa Nusantara dengan harga yang ramah di kantong.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- 5. Fitur atau Manfaat (Features/Benefits) (opsional): Bagian yang menampilkan 3-4
+poin penting atau fitur yang ditawarkan oleh website/layanan/event -->
+    <section class="max-w-6xl mx-auto px-6 py-16">
+        <div class="text-center mb-10">
+            <h2 class="text-2xl font-bold text-gray-900">Testimoni Pelanggan</h2>
+            <div class="w-12 h-1 bg-orange-500 mx-auto mt-2 rounded"></div>
+        </div>
+        <div class="bg-orange-50/40 border border-orange-100 rounded-2xl p-8 max-w-3xl mx-auto flex items-start gap-4 shadow-sm">
+            <div class="w-12 h-12 bg-orange-200 text-orange-700 rounded-full flex items-center justify-center font-bold text-lg shrink-0">
+                👤
+            </div>
+            <div>
+                <p class="italic text-gray-700 leading-relaxed mb-4">
+                    "Makanannya enak banget! Rasa tradisionalnya benar-benar terasa, bahan juga segar. Pasti bakal order lagi!"
+                </p>
+                <h4 class="font-bold text-gray-900 text-sm">Siti Rahma</h4>
+                <p class="text-xs text-gray-500">Pelanggan Setia</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- 7. Form Pendaftaran/Subscription/Contact: Bagian untuk pengunjung yang ingin
+mendaftar, berlangganan, atau mendapatkan informasi lebih lanjut. Form ini tidak
+perlu berfungsi, hanya tampilannya saja. -->
+    <section id="kontak" class="max-w-6xl mx-auto px-6 py-16">
+        <div class="text-center mb-12">
+            <h2 class="text-2xl font-bold text-gray-900">Kontak / Pesan</h2>
+            <div class="w-12 h-1 bg-orange-500 mx-auto mt-2 rounded"></div>
+        </div>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-start">
+            <!-- Informasi Kontak -->
+            <div class="space-y-6">
+                <div>
+                    <h3 class="font-bold text-gray-900 text-lg">Ada pertanyaan atau ingin memesan?</h3>
+                    <p class="text-gray-600 text-sm mt-1">Silakan isi form di samping, kami akan segera menghubungi Anda.</p>
+                </div>
+                <div class="space-y-4 text-sm text-gray-600">
+                    <div class="flex items-center gap-3">
+                        <span class="text-orange-600 font-bold">📍</span>
+                        <span>Makassar, Sulawesi Selatan</span>
+                    </div>
+                    <div class="flex items-center gap-3">
+                        <span class="text-orange-600 font-bold">📞</span>
+                        <span>0812-3456-7890</span>
+                    </div>
+                    <div class="flex items-center gap-3">
+                        <span class="text-orange-600 font-bold">✉️</span>
+                        <span>rasanusantara@gmail.com</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Formulir Pesan -->
+            <form class="bg-white p-6 rounded-2xl shadow-sm border border-gray-100 space-y-4">
+                <div>
+                    <label class="block text-xs font-semibold text-gray-700 mb-1">Nama</label>
+                    <input type="text" placeholder="Nama lengkap Anda" class="w-full px-4 py-2 border border-gray-200 rounded-lg text-sm focus:outline-none focus:ring-2 focus:ring-orange-500/50">
+                </div>
+                <div>
+                    <label class="block text-xs font-semibold text-gray-700 mb-1">Email</label>
+                    <input type="email" placeholder="contoh@email.com" class="w-full px-4 py-2 border border-gray-200 rounded-lg text-sm focus:outline-none focus:ring-2 focus:ring-orange-500/50">
+                </div>
+                <div>
+                    <label class="block text-xs font-semibold text-gray-700 mb-1">Pesan</label>
+                    <textarea rows="4" placeholder="Tulis pesan atau pesanan Anda..." class="w-full px-4 py-2 border border-gray-200 rounded-lg text-sm focus:outline-none focus:ring-2 focus:ring-orange-500/50"></textarea>
+                </div>
+                <button type="button" class="w-full bg-orange-600 hover:bg-orange-700 text-white font-medium py-2.5 rounded-lg transition shadow">
+                    Kirim Pesan
+                </button>
+            </form>
+        </div>
+    </section>
+
+    <!-- 8. footer: Berisi informasi kontak, link ke media sosial, dan informasi tambahan
+(copyright, kebijakan privasi, dll). -->
+    <footer class="border-t border-gray-200 bg-zinc-800 py-6 px-8 flex flex-col md:flex-row items-center justify-between gap-4 text-xs text-gray-500 bg-grey-200">
+        <div class="flex items-center gap-2 font-bold text-gray-800">
+            🍲 <span class="text-orange-600"> RasaNusantara</span>
+        </div>
+        <div class="flex gap-4 text-base text-gray-600">
+            <a href="#" class="hover:text-orange-600">📷</a>
+            <a href="#" class="hover:text-orange-600">📘</a>
+            <a href="#" class="hover:text-orange-600">🎵</a>
+            <a href="#" class="hover:text-orange-600">▶️</a>
+        </div>
+        <div>
+            © 2025 RasaNusantara. All rights reserved.
+        </div>
+    </footer>
+
+</body>
+</html>

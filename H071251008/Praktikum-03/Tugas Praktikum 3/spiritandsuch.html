@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Spirit & Such Consultation Office</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+</head>
+<body class="bg-amber-50 text-slate-800 font-sans">
+
+    <!-- NAVBAR -->
+    <nav class="bg-yellow-400 border-b-4 border-slate-900 sticky top-0 z-50 shadow-md">
+        <input type="checkbox" id="menu-toggle" class="peer hidden">
+
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-20">
+                <div class="flex items-center space-x-3">
+                    <div>
+                        <span class="text-xl sm:text-2xl font-black tracking-wider text-slate-900">SPIRIT & SUCH CONSULTATION</span>
+                        <p class="text-[10px] sm:text-xs font-bold text-red-600 tracking-widest">"Solusi Mutlak Masalah Supranatural"</p>
+                    </div>
+                </div>
+
+                <div class="hidden lg:flex space-x-6 font-bold text-slate-900 items-center">
+                    <a href="#beranda" class="hover:text-red-600 transition">Beranda</a>
+                    <a href="#tentang" class="hover:text-red-600 transition">Tentang</a>
+                    <a href="#layanan" class="hover:text-red-600 transition">Layanan</a>
+                    <a href="#kontak" class="hover:text-red-600 transition">Kontak</a>
+                </div>
+
+                <!-- CTA Button Desktop -->
+                <div class="hidden lg:block">
+                    <a href="#kontak" class="bg-red-600 hover:bg-red-700 text-white font-extrabold text-sm px-4 py-2.5 rounded-full border-2 border-slate-900 shadow-[3px_3px_0px_0px_rgba(15,23,42,1)] transition">
+                        Pesan Jasa Sekarang
+                    </a>
+                </div>
+
+                <div class="lg:hidden flex items-center">
+                    <label for="menu-toggle" class="cursor-pointer text-slate-900 focus:outline-none p-2 border-2 border-slate-900 rounded-xl bg-yellow-300 shadow-[2px_2px_0px_0px_rgba(15,23,42,1)]">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M4 6h16M4 12h16M4 18h16"></path>
+                        </svg>
+                    </label>
+                </div>
+            </div>
+        </div>
+
+        <!-- Dropdown Mobile -->
+        <div id="mobile-menu" class="hidden peer-checked:block lg:hidden bg-yellow-300 border-t-4 border-slate-900 px-4 pt-4 pb-6 space-y-4">
+            <div class="flex flex-col space-y-3 font-bold text-slate-900 text-base">
+                <a href="#beranda" class="mobile-link block hover:text-red-600 py-1 border-b border-yellow-400">Beranda</a>
+                <a href="#tentang" class="mobile-link block hover:text-red-600 py-1 border-b border-yellow-400">Tentang</a>
+                <a href="#layanan" class="mobile-link block hover:text-red-600 py-1 border-b border-yellow-400">Layanan</a>
+                <a href="#kontak" class="mobile-link block hover:text-red-600 py-1">Kontak</a>
+            </div>
+            <div>
+                <a href="#kontak" class="mobile-link block text-center bg-red-600 text-white font-extrabold text-sm px-4 py-3 rounded-xl border-2 border-slate-900 shadow-[3px_3px_0px_0px_rgba(15,23,42,1)]">
+                    Pesan Jasa Sekarang
+                </a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- 2. HEADER -->
+    <header class="bg-slate-900 text-white py-4 px-4 text-center border-b-4 border-yellow-400">
+        <div class="max-w-7xl mx-auto space-y-1">
+            <p class="text-xs sm:text-sm font-medium text-slate-300">Pusat Bantuan Spiritual Resmi, Pembersih Kutukan, dan Solusi Masalah Gaib Terpercaya di Jepang.</p>
+        </div>
+    </header>
+
+    <!-- 3. HERO SECTION -->
+    <section id="beranda" class="relative bg-yellow-300 py-20 px-4 border-b-4 border-slate-900 overflow-hidden">
+        <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+            <div class="space-y-4">
+                <span class="bg-red-600 text-white text-xs font-black px-8 py-2 rounded-md border-2 border-slate-900 mb-10">
+                    BIRO KONSULTASI SPIRITUAL #1 DI CHŌMEIICHI
+                </span>
+                <h2 class="text-4xl sm:text-6xl font-black text-slate-900 leading-tight">
+                    Teror Makhluk Gaib & <span class="text-red-600">Kutukan Astral</span> Merusak Hidup Anda?
+                </h2>
+                <p class="text-lg font-medium text-slate-700">
+                    Jangan biarkan energi negatif menghancurkan kediaman dan mental Anda. Percayakan penanganannya pada <strong class="text-slate-900">Master Reigen Arataka</strong>, spesialis pembersih roh dan konsultan spiritual terkemuka!
+                </p>
+                <div class="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-4 pt-4">
+                    <a href="#kontak" class="bg-slate-900 hover:bg-slate-800 text-yellow-300 font-extrabold text-center px-8 py-4 rounded-xl border-2 border-slate-900 shadow-[4px_4px_0px_0px_#dc2626] transition">
+                        Daftar Sekarang
+                    </a>
+                    <a href="#layanan" class="bg-white hover:bg-slate-100 text-slate-900 font-extrabold text-center px-8 py-4 rounded-xl border-2 border-slate-900 shadow-[4px_4px_0px_0px_rgba(15,23,42,1)] transition">
+                        Pelajari Lebih Lanjut
+                    </a>
+                </div>
+            </div>
+
+            <div class="flex justify-center">
+                <div class="bg-white p-8 rounded-3xl border-4 border-slate-900 shadow-[8px_8px_0px_0px_rgba(15,23,42,1)] text-center relative rotate-2">
+                    <div class="absolute -top-3 -right-9 bg-red-600 text-white font-black text-md px-7 py-3 rounded-full border-2 border-slate-900 rotate-15">
+                        SPECIALIST!
+                    </div>
+                    <div class="w-110 h-54 sm:w-110 sm:h-54 rounded-2xl bg-slate-100 border-2 border-slate-900 flex items-center justify-center mb-1 overflow-hidden shadow-inner">
+                        <img src="https://images.prod.boo.dating/database/profiles/22298/Arataka-Reigen-Enneagram-and-Personality-Type.jpg" alt="Reigen Arataka" class="w-full h-full object-cover">
+                    </div>
+                    <h3 class="text-3xl font-bold text-slate-900">Master Reigen Arataka</h3>
+                    <p class="text-slate-600 font-medium text-sm mt-1">"Pakar supranatural terpercaya dengan tingkat keberhasilan mutlak."</p>
+                    <div class="mt-3 bg-yellow-200 p-3 rounded-xl border-2 border-dashed border-slate-900 text-xs font-bold text-slate-800">
+                        Didukung Tenaga Spiritual Esper Level Tinggi.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 4. TENTANG -->
+    <section id="tentang" class="py-20 px-4 bg-white border-b-4 border-slate-900">
+        <div class="max-w-4xl mx-auto text-center space-y-6">
+            <h3 class="text-2xl font-black text-red-600 tracking-widest">TENTANG KAMI</h3>
+            <h4 class="text-3xl sm:text-4xl font-extrabold text-slate-900">Misi Suci Menyelamatkan Anda dari Gangguan Gaib</h4>
+            <p class="text-slate-600 text-lg leading-relaxed">
+                Kantor Konsultasi Roh dan Semacamnya hadir untuk memberikan perlindungan penuh terhadap berbagai ancaman astral, kutukan digital, hingga beban energi negatif yang menempel pada tubuh Anda. <strong class="text-slate-900">Kami menjamin setiap masalah gaib diselesaikan tuntas hingga Anda kembali merasakan kedamaian hidup!</strong>
+            </p>
+        </div>
+    </section>
+
+    <!-- 5. FITUR / LAYANAN -->
+<section id="layanan" class="py-20 px-4 bg-amber-200 border-b-4 border-slate-900">
+    <div class="max-w-7xl mx-auto">
+        <div class="text-center max-w-2xl mx-auto mb-16 space-y-3">
+             <h3 class="text-2xl font-black text-red-600 tracking-widest">LAYANAN</h3>
+            <h3 class="text-3xl sm:text-4xl font-black text-slate-900">Daftar Solusi Penanganan Gaib</h3>
+            <p class="text-slate-700 font-medium">Pilih layanan pembersihan spiritual yang sesuai dengan tingkat anomali Anda.</p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <!-- C1 -->
+            <div class="bg-white p-6 sm:p-8 rounded-[2rem] border-[3px] border-slate-900 shadow-[4px_4px_0px_0px_#0f172a] flex flex-col justify-between transition-all duration-300 hover:-translate-y-2 hover:scale-[1.02] cursor-pointer">
+                <div>
+                    <h4 class="text-xl font-black text-slate-900 mb-2">Eksorsisme & Pengusiran Roh</h4>
+                    <p class="text-slate-600 text-sm leading-relaxed mb-6">
+                        Pembersihan spiritual mutlak menggunakan teknik <strong class="text-slate-900">Salt Splash Suci</strong> untuk mengusir entitas jahat di rumah atau tempat usaha Anda sampai tuntas.
+                    </p>
+                </div>
+                <div class="pt-4 border-t-2 border-dashed border-slate-200 flex justify-between items-center">
+                    <span class="font-black text-red-600 text-lg">¥5.000 / Sesi</span>
+                </div>
+            </div>
+            <!-- C2 -->
+            <div class="bg-white p-6 sm:p-8 rounded-[2rem] border-[3px] border-slate-900 shadow-[4px_4px_0px_0px_#0f172a] flex flex-col justify-between transition-all duration-300 hover:-translate-y-2 hover:scale-[1.02] cursor-pointer">
+                <div>
+                    <h4 class="text-xl font-black text-slate-900 mb-2">Penyucian Foto Berhantu</h4>
+                    <p class="text-slate-600 text-sm leading-relaxed mb-6">
+                        Menghilangkan energi kutukan hingga penampakan misterius yang melekat pada dokumentasi foto anda.
+                    </p>
+                </div>
+                <div class="pt-4 border-t-2 border-dashed border-slate-200 flex justify-between items-center">
+                    <span class="font-black text-red-600 text-lg">¥6.000</span>
+                </div>
+            </div>
+            <!-- C3 -->
+            <div class="bg-white p-6 sm:p-8 rounded-[2rem] border-[3px] border-slate-900 shadow-[4px_4px_0px_0px_#0f172a] flex flex-col justify-between transition-all duration-300 hover:-translate-y-2 hover:scale-[1.02] cursor-pointer">
+                <div>
+                    <h4 class="text-xl font-black text-slate-900 mb-2">Penghapusan Kutukan Digital</h4>
+                    <p class="text-slate-600 text-sm leading-relaxed mb-6">
+                        Proteksi dari <strong class="text-slate-900">Kutukan Siber & Roh Penghuni Jaringan</strong> yang membuat perangkat komputer rusak atau terkunci misterius.
+                    </p>
+                </div>
+                <div class="pt-4 border-t-2 border-dashed border-slate-200 flex justify-between items-center">
+                    <span class="font-black text-red-600 text-lg">¥4.500</span>
+                </div>
+            </div>
+            <!-- C4 -->
+            <div class="bg-white p-6 sm:p-8 rounded-[2rem] border-[3px] border-slate-900 shadow-[4px_4px_0px_0px_#0f172a] flex flex-col justify-between transition-all duration-300 hover:-translate-y-2 hover:scale-[1.02] cursor-pointer">
+                <div>
+                    <h4 class="text-xl font-black text-slate-900 mb-2">Pijat Pelepasan Tempelan Roh</h4>
+                    <p class="text-slate-600 text-sm leading-relaxed mb-6">
+                        Terapi totok syaraf khusus untuk merontokkan beban gaib, pundak berat, dan leher kaku akibat roh halus iseng yang menempel di tubuh.
+                    </p>
+                </div>
+                <div class="pt-4 border-t-2 border-dashed border-slate-200 flex justify-between items-center">
+                    <span class="font-black text-red-600 text-lg">¥6.000</span>
+                </div>
+            </div>
+            <!-- C5 -->
+            <div class="bg-white p-6 sm:p-8 rounded-[2rem] border-[3px] border-slate-900 shadow-[4px_4px_0px_0px_#0f172a] flex flex-col justify-between transition-all duration-300 hover:-translate-y-2 hover:scale-[1.02] cursor-pointer">
+                <div>
+                    <h4 class="text-xl font-black text-slate-900 mb-2">Konsultasi Aura & Nasib Buruk</h4>
+                    <p class="text-slate-600 text-sm leading-relaxed mb-6">
+                        Mengatasi kesialan karier dan keuangan akibat <strong class="text-slate-900">penutupan aura</strong> untuk membuka kembali jalur takdir terang masa depan.
+                    </p>
+                </div>
+                <div class="pt-4 border-t-2 border-dashed border-slate-200 flex justify-between items-center">
+                    <span class="font-black text-red-600 text-lg">¥8.400 / jam</span>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+    <!-- 6. TESTIMONI -->
+    <section class="py-20 px-4 bg-white border-b-4 border-slate-900">
+        <div class="max-w-7xl mx-auto">
+            <div class="text-center max-w-2xl mx-auto mb-16 space-y-4">
+                <h3 class="text-2xl font-black text-red-600 tracking-widest">TESTIMONI</h3>
+                <h4 class="text-3xl sm:text-4xl font-extrabold text-slate-900">Apa Kata Mereka yang Telah Diselamatkan?</h4>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+                <div class="bg-yellow-50 p-6 rounded-2xl border-4 border-slate-900 shadow-[4px_4px_0px_0px_rgba(15,23,42,1)] space-y-4">
+                    <p class="italic text-slate-700">"Rumah saya tadinya sangat menyeramkan dan penuh energi jahat. Berkat penanganan Master Reigen, seluruh roh jahat berhasil diusir bersih dan hidup saya kembali tenang!"</p>
+                    <div class="flex items-center space-x-3">
+                        <div class="w-10 h-10 bg-red-400 rounded-full border-2 border-slate-900 flex items-center justify-center font-bold text-white">SM</div>
+                        <div>
+                            <h5 class="font-extrabold text-slate-900 text-sm">Shigeo K. (Mob)</h5>
+                            <p class="text-xs text-slate-500">Asisten / Klien Setia</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="bg-yellow-50 p-6 rounded-2xl border-4 border-slate-900 shadow-[4px_4px_0px_0px_rgba(15,23,42,1)] space-y-4">
+                    <p class="italic text-slate-700">"Saya sempat menguasai tubuh manusia, namun berhasil dikalahkan oleh teknik spiritual tingkat tinggi di kantor ini. Saya sangat menghormati kekuatan Master Reigen!"</p>
+                    <div class="flex items-center space-x-3">
+                        <div class="w-10 h-10 bg-purple-400 rounded-full border-2 border-slate-900 flex items-center justify-center font-bold text-white">EK</div>
+                        <div>
+                            <h5 class="font-extrabold text-slate-900 text-sm">Ex-Leader Dimple</h5>
+                            <p class="text-xs text-slate-500">Entitas Astral / Saksi Ahli</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 7. FORM PENDAFTARAN -->
+    <section id="kontak" class="py-20 px-4 bg-yellow-300 border-b-4 border-slate-900">
+        <div class="max-w-2xl mx-auto bg-white p-8 sm:p-12 rounded-3xl border-4 border-slate-900 shadow-[8px_8px_0px_0px_rgba(15,23,42,1)]">
+            <div class="text-center space-y-3 mb-8">
+                <h3 class="text-xs font-black text-red-600 uppercase tracking-widest">Pendaftaran Konsultasi</h3>
+                <h4 class="text-3xl font-extrabold text-slate-900">Kirim Keluhan Gangguan Gaib Anda!</h4>
+            </div>
+
+            <form class="space-y-6" onsubmit="event.preventDefault(); alert('Form berhasil dikirim! Tim spiritual kami akan segera merespons.');">
+                <div>
+                    <label class="block text-sm font-bold text-slate-900 mb-2">Nama Lengkap</label>
+                    <input type="text" placeholder="Masukkan Nama Lengkap" class="w-full px-4 py-3 rounded-xl border-2 border-slate-900 focus:outline-none focus:ring-2 focus:ring-red-600 font-medium" required>
+                </div>
+                <div>
+                    <label class="block text-sm font-bold text-slate-900 mb-2">Pilih Jenis Layanan Supranatural</label>
+                    <select class="w-full px-4 py-3 rounded-xl border-2 border-slate-900 focus:outline-none focus:ring-2 focus:ring-red-600 font-medium bg-white">
+                        <option>Eksorsisme & Pengusiran Roh (¥5.000)</option>
+                        <option>Penyucian Foto Berhantu (¥3.000)</option>
+                        <option>Penghapusan Kutukan Digital (¥4.500)</option>
+                        <option>Pijat Pelepasan Tempelan Roh (¥6.000)</option>
+                        <option>Konsultasi Aura & Nasib Buruk (¥8.400/jam)</option>
+                    </select>
+                </div>
+                <div>
+                    <label class="block text-sm font-bold text-slate-900 mb-2">Ceritakan Gangguan Gaib yang Dialami</label>
+                    <textarea rows="4" placeholder="Tuliskan teror atau masalah mistis yang Anda rasakan" class="w-full px-4 py-3 rounded-xl border-2 border-slate-900 focus:outline-none focus:ring-2 focus:ring-red-600 font-medium" required></textarea>
+                </div>
+                <button type="submit" class="w-full bg-red-600 hover:bg-red-700 text-white font-extrabold py-4 rounded-xl border-2 border-slate-900 shadow-[4px_4px_0px_0px_rgba(15,23,42,1)] transition text-lg uppercase tracking-wider">
+                    Kirim Permintaan Solusi
+                </button>
+            </form>
+        </div>
+    </section>
+
+   <footer class="bg-slate-900 text-slate-400 py-12 px-6 sm:px-10 lg:px-16 border-t border-slate-800">
+        <div class="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center gap-8 text-center md:text-left">
+            <div class="space-y-2">
+                <span class="text-base sm:text-lg font-extrabold tracking-wider text-white">SPIRIT & SUCH CONSULTATION OFFICE</span>
+                <p class="text-xs sm:text-sm text-slate-500">&copy; 2026 Spirit & Such Consultation Office. All rights reserved.</p>
+            </div>
+            <div class="flex flex-wrap justify-center gap-6 text-sm font-semibold text-slate-300">
+                <a href="#beranda" class="hover:text-purple-400 transition">Beranda</a>
+                <a href="#tentang" class="hover:text-purple-400 transition">Tentang</a>
+                <a href="#layanan" class="hover:text-purple-400 transition">Layanan</a>
+                <a href="#kontak" class="hover:text-purple-400 transition">Pemesanan</a>
+            </div>
+            <div class="text-xs sm:text-sm space-y-1.5 text-slate-300">
+                <p>📞 Telp: <span class="text-white font-medium">+81 3-5555-0199</span></p>
+                <p>📧 Email: <span class="text-white font-medium">contact@reitokasodansho.jp</span></p>
+            </div>
+        </div>
+    </footer>
+
+   
+</body>
+</html>

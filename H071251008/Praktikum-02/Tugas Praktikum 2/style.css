@@ -1,0 +1,412 @@
+* {
+    box-sizing: border-box;
+    transition: all 0.3s ease;
+}
+
+body {
+    margin: 0;
+    padding: 0 30px;
+    background-color: #F7F9E1;
+    color: #204654;
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+}
+
+h1 {
+    color: #204654;
+    margin: 20px 0 10px;
+}
+
+h2 {
+    color: #204654;
+    margin-bottom: 15px;
+}
+
+h3 {
+    color: #7FA35A;
+    margin-bottom: 5px;
+}
+
+p {
+    margin-top: 5px;
+}
+
+hr {
+    border: none;
+    border-top: 1px solid #7FA35A;
+    margin: 25px 0;
+}
+
+nav {
+    text-align: center;
+    padding: 12px;
+    background-color: #204654;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    margin: 0 10px;
+    font-weight: bold;
+    position: relative;
+    padding-bottom: 3px;
+}
+
+nav a::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: #A9E0F1;
+    transition: width 0.3s ease;
+}
+
+nav a:hover::after {
+    width: 100%;
+}
+
+nav a:hover {
+    color: #A9E0F1;
+}
+
+#beranda {
+    padding: 20px;
+}
+
+#beranda img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+#tentang {
+    padding: 20px;
+}
+
+#tentang table {
+    width: 100%;
+    border-spacing: 20px 0;
+}
+
+#tentang td:first-child {
+    width: 45%;
+    vertical-align: top;
+}
+
+#tentang td:last-child {
+    width: 55%;
+    vertical-align: top;
+}
+
+#tentang iframe {
+    width: 100%;
+    height: 280px;
+    border-radius: 8px;
+    border: none;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+#aktivitas {
+    padding: 20px;
+}
+
+#aktivitas table {
+    width: 100%;
+}
+
+#aktivitas ol {
+    padding-left: 25px;
+}
+
+#aktivitas li {
+    margin-bottom: 20px;
+}
+
+#aktivitas img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.gambarwisata {
+    border-radius: 10px;
+    border: 2px solid #A9E0F1;
+    padding: 5px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.judulaktivitas {
+    color: #204654;
+    margin-bottom: 5px;
+}
+
+#aktivitas table table {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: white;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+}
+
+#aktivitas table table th {
+    background-color: #204654;
+    color: white;
+}
+
+#aktivitas table table td,
+#aktivitas table table th {
+    padding: 10px;
+    border: 1px solid #7FA35A;
+}
+
+#aktivitas table table tr:hover {
+    background-color: #F1F4D0;
+}
+
+#galeri {
+    padding: 20px;
+}
+
+#galeri table {
+    width: 100%;
+    display: block;
+}
+
+#galeri tr {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-bottom: 20px;
+}
+
+#galeri td {
+    flex: 1;
+    max-width: 380px;
+    background: white;
+    padding: 10px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.05);
+}
+
+#galeri img {
+    width: 100%;
+    height: 215px;
+    object-fit: cover;
+    border-radius: 8px;
+    transition: transform 0.4s ease, filter 0.4s ease;
+}
+
+#galeri img:hover {
+    transform: scale(1.05);
+    filter: brightness(1.05);
+}
+
+#galeri b {
+    display: block;
+    text-align: center;
+    margin-top: 8px;
+    color: #204654;
+}
+
+#lokasi {
+    padding: 20px;
+}
+
+#lokasi iframe {
+    width: 100%;
+    height: 350px;
+    border: none;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+#formulir {
+    padding: 25px;
+    background-color: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(32, 70, 84, 0.08);
+}
+
+#formulir input[type="text"],
+#formulir input[type="email"],
+#formulir input[type="tel"],
+#formulir select,
+#formulir textarea {
+    width: 100%;
+    padding: 11px 14px;
+    margin: 6px 0 14px;
+    border: 1.5px solid #c8d6af;
+    border-radius: 6px;
+    background-color: #FAFAFA;
+    color: #204654;
+    font-size: 14px;
+}
+
+#formulir input[type="text"]:hover,
+#formulir input[type="email"]:hover,
+#formulir input[type="tel"]:hover,
+#formulir select:hover,
+#formulir textarea:hover {
+    border-color: #7FA35A;
+}
+
+#formulir input[type="text"]:focus,
+#formulir input[type="email"]:focus,
+#formulir input[type="tel"]:focus,
+#formulir select:focus,
+#formulir textarea:focus {
+    outline: none;
+    border-color: #204654;
+    background-color: #ffffff;
+}
+
+#formulir input[type="radio"],
+#formulir input[type="checkbox"] {
+    cursor: pointer;
+    accent-color: #7FA35A;
+    transform: scale(1.1);
+    margin-right: 6px;
+}
+
+#formulir label {
+    cursor: pointer;
+}
+
+#formulir input[type="submit"] {
+    background-color: #7FA35A;
+    color: white;
+    font-weight: bold;
+    padding: 10px 24px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+#formulir input[type="submit"]:hover {
+    background-color: #6c8d4e;
+    transform: translateY(-2px);
+}
+
+#formulir input[type="reset"] {
+    background-color: #e0e0e0;
+    color: #333333;
+    font-weight: bold;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background-color 0.2s ease, transform 0.2s ease;
+}
+
+#formulir input[type="reset"]:hover {
+    background-color: #d15151;
+    color: white;
+    transform: translateY(-2px);
+}
+
+#footer {
+    padding: 20px;
+    text-align: center;
+    background-color: #204654;
+    color: white;
+    border-radius: 10px 10px 0 0;
+    margin-top: 40px;
+}
+
+#footer hr {
+    border-top: 1px solid #7FA35A;
+}
+
+#footer table {
+    width: 100%;
+}
+
+#footer td {
+    padding: 10px;
+    vertical-align: middle;
+}
+
+#footer h3 {
+    color: #A9E0F1;
+}
+
+#footer a {
+    color: #A9E0F1;
+    text-decoration: none;
+    margin: 0 5px;
+}
+
+#footer a:hover {
+    color: white;
+    text-decoration: underline;
+}
+
+@media (max-width: 1000px) {
+    body {
+        padding: 0 20px;
+    }
+    nav a {
+        margin: 0 5px;
+    }
+    #tentang table {
+        border-spacing: 10px 0;
+    }
+}
+
+@media (max-width: 768px) {
+    body {
+        padding: 0 15px;
+    }
+    nav {
+        padding: 10px 5px;
+    }
+    nav a {
+        display: inline-block;
+        margin: 4px 8px;
+    }
+    #tentang td:first-child,
+    #tentang td:last-child {
+        display: block;
+        width: 100% !important;
+    }
+    #aktivitas td {
+        display: block;
+        width: 100% !important;
+    }
+    #galeri tr {
+        flex-direction: column;
+        align-items: center;
+    }
+    #galeri td {
+        width: 100%;
+        max-width: 100%;
+    }
+}
+
+@media (max-width: 500px) {
+    body {
+        padding: 0 10px;
+        font-size: 14px;
+    }
+    h1 {
+        font-size: 22px;
+    }
+    h2 {
+        font-size: 18px;
+    }
+    nav a {
+        display: block;
+        margin: 6px 0;
+    }
+    #footer td {
+        display: block;
+        width: 100%;
+        text-align: center;
+    }
+}
